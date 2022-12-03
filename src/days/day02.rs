@@ -72,7 +72,7 @@ pub fn solve() -> (String, String) {
         let offset_char = char::from_u32('X' as u32 + (((opp_pick as u32 - 'A' as u32 ) + *needOffset.get(&my_pick).unwrap()) %3)).unwrap();
 
         let mut line_score2 = *pickScore.get(&offset_char).unwrap();
-         line_score2 += *winScore.get(&opp_pick).unwrap().get(&offset_char).unwrap();
+        line_score2 += *winScore.get(&opp_pick).unwrap().get(&offset_char).unwrap();
 
         score1 += line_score1;
         score2 += line_score2;
