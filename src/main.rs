@@ -17,14 +17,14 @@ fn main() {
 
     let time = Instant::now();
 
-    let elapsed_time = time.elapsed().as_millis();
-
     let (sol1, sol2) = get_solver(*day)();
-
+    
     println!("Day {} first solution: {}", day, sol1);
     println!("Day {} second solution: {}", day, sol2);
+    
+    let elapsed_time = time.elapsed().as_nanos() as f64 / 1000000.0;
 
-    println!("Total runtime: {} ms", elapsed_time);
+    println!("Total runtime: {:.3} ms", elapsed_time);
 }
 
 fn get_solver(day: i32) -> fn() -> (String, String) {
