@@ -1,6 +1,6 @@
 mod days;
 
-use days::{day01, day02, day03};
+use days::{day01, day02, day03, day04};
 
 use std::env;
 use std::time::Instant;
@@ -32,6 +32,7 @@ fn get_solver(day: i32) -> fn() -> (String, String) {
         1 => day01::solve,
         2 => day02::solve,
         3 => day03::solve,
+        4 => day04::solve,
         _ => unimplemented!(),
     }
 }

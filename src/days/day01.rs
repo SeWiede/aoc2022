@@ -33,7 +33,7 @@ pub fn solve() -> (String, String) {
     let mut sol2 = "<unsolved>".to_string();
 
     // Windows style
-    let path = "../../inputs/1/input".replace("/", "\\");
+    let path = "inputs/1/input".replace("/", "\\");
 
     let contents = read_to_string(path)
         .expect("Error while reading file");
